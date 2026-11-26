@@ -1,6 +1,6 @@
 [project]
-name = "bexplains-refpacks"
-version = "1.2.0"
+name = "bexplains-refpacks-keyposes"
+version = "1.2.0+keyposes.1"
 description = "Save, load and group reusable reference packs and complete reference sets. Includes experimental Flux 2 and LTXV adapters."
 readme = "README.md"
 license = { file = "LICENSE" }
@@ -9,9 +9,9 @@ dependencies = ["safetensors>=0.4.3"]
 classifiers = ["Operating System :: OS Independent"]
 
 [project.urls]
-Repository = "https://github.com/BExplains/ComfyUI-RefPacks"
-"Bug Tracker" = "https://github.com/BExplains/ComfyUI-RefPacks/issues"
+Repository = "https://github.com/LucaCatone/ComfyUI-RefPacks-keyposes"
+"Bug Tracker" = "https://github.com/LucaCatone/ComfyUI-RefPacks-keyposes/issues"
 
 [tool.comfy]
 PublisherId = "bexplains"
-DisplayName = "BExplains RefPacks"
+DisplayName = "BExplains RefPacks (keyposes fork)"
