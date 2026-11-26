@@ -4,7 +4,7 @@ import torch
 
 FORMAT = "bexplains.refpack"
 VERSION = 1
-ROLES = ("subject", "character", "item", "video", "motion", "outfit", "location", "reference", "audio", "style")
+ROLES = ("subject", "character", "item", "video", "motion", "keyposes", "outfit", "location", "reference", "audio", "style")
 SUBJECT_ROLES = ("subject", "character", "item")
 
 
@@ -94,6 +94,11 @@ def add_pack(pack, references=None, role="subject", role_id=0):
         raise ValueError(f"A {role} pack must contain images, not a video.")
     if role in ("video", "motion") and any(e["kind"] != "video" for e in pack["entries"]):
         raise ValueError(f"The {role} role requires video references.")
+    if role == "keyposes":
+        if any(e["kind"] not in ("image", "video") for e in pack["entries"]):
+            raise ValueError("The keyposes role requires image or video references.")
+        if len({e["kind"] for e in pack["entries"]}) > 1:
+            raise ValueError("A keyposes pack must hold either images or one video, not both.")
     if role == "audio" and any(e["kind"] != "audio" for e in pack["entries"]):
         raise ValueError("The audio role requires audio references.")
     subjects = set(subject_numbers(references).values())
