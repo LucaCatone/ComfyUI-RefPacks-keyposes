@@ -1,8 +1,10 @@
 # RefPacks — keyposes fork
 
 > Shared nodes for [BExplains MiniMax H3 RefPacks](https://github.com/BExplains/ComfyUI-MiniMax-H3-RefPacks).
-> This fork only adds the `keyposes` entry to the role list and lets that role accept image packs as well
-as a single pose video. Install alongside the H3 fork of the same name suffix.
+> This fork adds the **`keyposes`** role to the role list, lets it accept image packs as well as a single
+> pose video (not both in one pack), and documents it in the role tooltip. The package identity is
+> `bexplains-refpacks-keyposes` so it does not collide with the upstream registry entry.
+> Install alongside the H3 fork of the same name suffix.
 
 ---
 
