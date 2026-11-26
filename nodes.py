@@ -141,7 +141,7 @@ class BExplainsAddRefPack:
     @classmethod
     def INPUT_TYPES(cls):
         return {"required": {"refpack": (PACK_TYPE,), "role": (list(ROLES),
-                    {"tooltip": "character = person; item = object; subject = generic subject. These create subject definitions. motion/video require video references. H3 resolves Character/Item aliases to Subject IDs and Motion aliases to Video IDs. style = visual aesthetic, addressed as <Style N> by H3; reference = general-purpose pictures without prescribed semantics."})},
+                    {"tooltip": "character = person; item = object; subject = generic subject. These create subject definitions. motion/video require video references. H3 resolves Character/Item aliases to Subject IDs and Motion aliases to Video IDs. style = visual aesthetic, addressed as <Style N> by H3; reference = general-purpose pictures without prescribed semantics. keyposes = discrete key poses, as image frames or one video, spread over the shot; H3 resolves <Poses N> to their Picture/Video slots and emits per-pose timing."})},
                 "optional": {"references": (SET_TYPE,)}}
     RETURN_TYPES = (SET_TYPE,)
     RETURN_NAMES = ("references",)
